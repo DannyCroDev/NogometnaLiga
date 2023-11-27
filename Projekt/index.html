@@ -2,32 +2,71 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" target="_blank" href="CSS/style.css" />
     <title>Sveucilisna nogometna liga</title>
-    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
-
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-        <img src="Slike/header.png" alt="Header Image" class="headerImg">
-
-            <!-- Navbar -->
-            <nav>
-                <div class="navbar">
-                  <div class="logo"><a href="#">SCST</a></div>
-                  <ul class="menu">
-                    <li><a href="#standings">Tablica</a></li>
-                    <li><a href="#news">Vijesti</a></li>
-                    <li><a href="#gallery">Galerija</a></li>
-                    <li><a href="#footer">O ligi</a></li>
-                    <li><a href="#footer">Prijava kapetana</a></li>
-                    <li><a href="#footer">Prijava voditelja</a></li>
-                  </ul>
-                </div>
-              </nav>
+    <nav>
+        <div class="logo">
+          <img src="Slike/SCST.png" alt="logo" class="headerImg"/>
+          <h1>SCST</h1>
         </div>
-    </header>
+        <ul>
+          <li>
+            <a href="#standings">Tablica</a>
+          </li>
+          <li>
+            <a href="#news">Vijesti</a>
+          </li>
+          <li>
+            <a href="#gallery">Galerija</a>
+          </li>
+          <li>
+            <a href="#footerInfo">Info</a>
+          </li>
+          <li>
+            <a href="#footer">Prijava kapetana</a>
+        </li>
+          <li>
+            <a href="#footer">Prijava voditelja</a>
+        </li>
+        </ul>
+        <div class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </div>
+      </nav>
+      <div class="menubar">
+        
+        <ul>
+            <div class="logo">
+                <img src="Slike/SCST.png" alt="logo" class="headerImg"/>
+            </div>
+          <li>
+            <a href="#standings">Tablica</a>
+          </li>
+          <li>
+            <a href="#news">Vijesti</a>
+          </li>
+          <li>
+            <a href="#gallery">Galerija</a>
+          </li>
+          <li>
+            <a href="#footerInfo">Info</a>
+          </li>
+          <li>
+            <a href="#footer">Prijava kapetana</a>
+        </li>
+          <li>
+            <a href="#footer">Prijava voditelja</a>
+        </li>
+        </ul>
+      </div>
+    
+    
 
     <!-- Section za tablicu -->
     <section id="standings">
@@ -54,7 +93,7 @@
     </section>
 
     <!-- Footer Section -->
-    <footer id="footer">
+    <footer id="footerInfo">
         <div class="container">
             <p>&copy; 2023 studentska sveučilišna liga</p>
         </div>
@@ -64,7 +103,7 @@
         <a href="#Home"><i class="fas fa-arrow-up"></i></a>
       </div>
     <!--Skripte JS datoteka ispod ove linije-->
-    <script></script>
+    <script src="navbar.js"></script>
     <!--Skripte JS datoteka iznad ove linije-->
 
 </body>
