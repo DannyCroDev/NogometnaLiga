@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <div class="header">
+
+    </div>
+    <div class="podheader">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css">
+        <div id="Prijava" class="tabcontent">
+            <h1>prijava</h1>
+        </div>
+
+        <div id="Ljestivca" class="tabcontent">
+            <h1>Ljestvica</h1>
+        </div>
+
+        <div id="Turnirprijava" class="tabcontent">
+            <h1>Turnir prijava</h1>
+        </div>
+
+        <div id="Info" class="tabcontent">
+            <h1>Info</h1>
+        </div>
+
+        <button class="tablink"><a href="index.html" style="text-decoration: none; color: black;">Home</a></button>
+        <button class="tablink"><a href="prijava.html"
+                style="text-decoration: none; color: #2b97c7;">Prijava</a></button>
+        <button class="tablink"><a href="turnirprijava.html" style="text-decoration: none; color: black;">Turnir
+                prijava</a></button>
+        <button class="tablink"><a href="info.html" style="text-decoration: none; color: black;">Info</a></button>
+    </div>
+
+    <div class="forma">
+        <form action="action_page.php" method="post">
+            <div class="container">
+                <label for="uname"><b>Korisničko ime</b></label>
+                <input type="text" placeholder="Unesite korisničko ime" name="uname" required>
+
+                <label for="psw"><b>Lozinka</b></label>
+                <input type="password" placeholder="Unesite lozinku" name="psw" required>
+                <button type="submit">Prijava u sustav</button>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
