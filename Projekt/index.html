@@ -2,38 +2,111 @@
 <html lang="en">
 
 <head>
-
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" target="_blank" href="CSS/style.css" />
+  <title>Sveucilisna nogometna liga</title>
 </head>
 
 <body>
-    <div class="header">
-
+  <nav>
+    <div class="logo">
+      <img src="Slike/SCST.png" alt="logo" class="headerImg" />
+      <h1>SCST</h1>
     </div>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <div id="Prijava" class="tabcontent">
-        <h1>Prijava</h1>
+    <ul>
+      <li>
+        <a href="#standings">Tablica</a>
+      </li>
+      <li>
+        <a href="#news">Vijesti</a>
+      </li>
+      <li>
+        <a href="#gallery">Galerija</a>
+      </li>
+      <li>
+        <a href="#footerInfo">Info</a>
+      </li>
+      <li>
+        <a href="prijavaKapetan.html">Prijava kapetana</a>
+      </li>
+      <li>
+        <a href="PrijavaOrganizator.html">Prijava voditelja</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
     </div>
+  </nav>
+  <div class="menubar">
 
-    <div id="Ljestivca" class="tabcontent">
-        <h1>Ljestvica</h1>
+    <ul>
+      <div class="logo">
+        <img src="Slike/SCST.png" alt="logo" class="headerImg" />
+      </div>
+      <li>
+        <a href="#standings">Tablica</a>
+      </li>
+      <li>
+        <a href="#news">Vijesti</a>
+      </li>
+      <li>
+        <a href="#gallery">Galerija</a>
+      </li>
+      <li>
+        <a href="#footerInfo">Info</a>
+      </li>
+      <li>
+        <a href="prijavaKapetan.html">Prijava kapetana</a>
+      </li>
+      <li>
+        <a href="PrijavaOrganizator.html">Prijava voditelja</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <!-- Section za tablicu -->
+  <section id="standings">
+    <div class="container">
+      <h2>Tablica rezultata</h2>
     </div>
+  </section>
 
-    <div id="Turnirprijava" class="tabcontent">
-        <h1>Turnir prijava</h1>
+  <!-- Section za vijesti -->
+  <section id="news">
+    <div class="container">
+      <h2>Zanimiljivosti i događaji</h2>
+      <!-- Ovdje idu vijesti -->
+      <!-- Koristiti box izgleed ? -->
     </div>
+  </section>
 
-    <div id="Info" class="tabcontent">
-        <h1>Info</h1>
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Galerija</h2>
+      <!-- ovdje idu slike -->
     </div>
+  </section>
 
-    <button class="tablink"><a href="index.html" style="text-decoration: none; color: #2b97c7;">Home</a></button>
-    <button class="tablink"><a href="prijava.html" style="text-decoration: none; color: black;">Prijava</a></button>
-    <button class="tablink"><a href="turnirprijava.html" style="text-decoration: none; color: black;">Turnir
-            prijava</a></button>
-    <button class="tablink"><a href="info.html" style="text-decoration: none; color: black;">Info</a></button>
+  <!-- Footer Section -->
+  <footer id="footerInfo">
+    <div class="container">
+      <p>&copy; 2023 studentska sveučilišna liga</p>
+    </div>
+  </footer>
+
+  <div class="button">
+    <a href="#Home"><i class="fas fa-arrow-up"></i></a>
+  </div>
+  <!--Skripte JS datoteka ispod ove linije-->
+  <script src="navbar.js"></script>
+  <!--Skripte JS datoteka iznad ove linije-->
 
 </body>
 
