@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" target="_blank" href="CSS/style.css" />
-    <title>Sveucilisna nogometna liga</title>
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />  </head>
 <body>
     <nav>
         <div class="logo">
@@ -14,24 +13,24 @@
           <h1>SCST</h1>
         </div>
         <ul>
-          <li>
-            <a href="#standings">Tablica</a>
+            <li>
+              <a href="#standings">Tablica</a>
+            </li>
+            <li>
+              <a href="#news">Vijesti</a>
+            </li>
+            <li>
+              <a href="#gallery">Galerija</a>
+            </li>
+            <li>
+              <a href="#footerInfo">Info</a>
+            </li>
+            <li>
+              <a href="#footer">Prijava kapetana</a>
           </li>
-          <li>
-            <a href="#news">Vijesti</a>
+            <li>
+              <a href="#footer">Prijava voditelja</a>
           </li>
-          <li>
-            <a href="#gallery">Galerija</a>
-          </li>
-          <li>
-            <a href="#footerInfo">Info</a>
-          </li>
-          <li>
-            <a href="#footer">Prijava kapetana</a>
-        </li>
-          <li>
-            <a href="#footer">Prijava voditelja</a>
-        </li>
         </ul>
         <div class="hamburger">
           <span class="line"></span>
@@ -88,21 +87,48 @@
     <section id="gallery">
         <div class="container">
             <h2>Galerija</h2>
+            <img src="Slike/SCST.png" class="proba">
+            <img src="Slike/SCST.png" class="proba">
+            <img src="Slike/SCST.png" class="proba">
+
             <!-- ovdje idu slike -->
         </div>
     </section>
 
-    <!-- Footer Section -->
-    <footer id="footerInfo">
-        <div class="container">
-            <p>&copy; 2023 studentska sveučilišna liga</p>
-        </div>
-    </footer>
+  
 
-    <div class="button">
-        <a href="#Home"><i class="fas fa-arrow-up"></i></a>
+    <button class="go_top_btn">
+        <a><i class="fa-solid fa-chevron-up goTopIcon"></i></a>
+    </button>
+
+    <section class="footer">
+      <div class="social">
+        <a href="https://www.unisport.hr/hr" class="footicon"><i class="fab fa-instagram footicon"></i></a>
+        <a href="https://www.unisport.hr/hr" class="footicon"><i class="fab fa-x-twitter footicon"></i></a>
+        <a href="https://www.unisport.hr/hr" class="footicon"><i class="fab fa-facebook-f footicon"></i></a>
       </div>
+      <ul class="list">
+        <li>
+          <a href="#">Tablica</a>
+        </li>
+        <li>
+          <a href="#">Galerija</a>
+        </li>
+        <li>
+          <a href="#">Vijesti</a>
+        </li>
+        <li>
+          <a href="#">Prijava kapetana</a>
+        </li>
+        <li>
+          <a href="#">Prijava voditelja</a>
+        </li>
+        
+      </ul>
+      <p class="copyright">Sveučilišna nogometna liga @ 2023</p>
+    </section>
     <!--Skripte JS datoteka ispod ove linije-->
+    <script src= "scroll_to_top.js"></script>
     <script src="navbar.js"></script>
     <!--Skripte JS datoteka iznad ove linije-->
 
