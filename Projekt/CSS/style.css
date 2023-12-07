@@ -1,4 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" target="_blank" href="CSS/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="Slike/SCST.png" alt="logo" class="headerImg" /></a>
+      <h1>SCST</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="#standings">Tablica</a>
+      </li>
+      <li>
+        <a href="#news">Vijesti</a>
+      </li>
+      <li>
+        <a href="#gallery">Galerija</a>
+      </li>
+      <li>
+        <a href="#footer">Info</a>
+      </li>
+      <li>
+        <a href="prijavaKapetan.html">Prijava kapetana</a>
+      </li>
+      <li>
+        <a href="PrijavaOrganizator.html">Prijava voditelja</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
+  <div class="menubar">
+
+    <ul>
+      <div class="logo">
+        <img src="Slike/SCST.png" alt="logo" class="headerImg" />
+      </div>
+      <li>
+        <a href="#standings">Tablica</a>
+      </li>
+      <li>
+        <a href="#news">Vijesti</a>
+      </li>
+      <li>
+        <a href="#gallery">Galerija</a>
+      </li>
+      <li>
+        <a href="prijavaKapetan.html">Prijava kapetana</a>
+      </li>
+      <li>
+        <a href="PrijavaOrganizator.html">Prijava voditelja</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+  <!-- Section za tablicu -->
+  <section id="standings">
+    <div class="container">
+      <h2 class="standings-title">Tablica rezultata</h2>
+    </div>
+  </section>
+
+  <!-- Section za vijesti -->
+  <section id="news">
+      <h2 class="news-title">Zanimiljivosti i događaji</h2>
+      <div class="news-container">
+
+        <div class="news-box">
+
+          <div class="news-box-img">
+            <img src="Slike/futsal2.jpg" class="news-img">
+          </div>
+
+          <div class="news-box-info">
+            <h3 class="news-box-h3">Prvi rezultati su tu</h3>
+            <p class="news-box-p">Najnoviji rezultati i taktički potezi oblikuju dinamičnu sezonu studentske nogometne lige, otkrivamo kako vodeći timovi balansiraju između izazova i uspjeha na terenu.</p>
+            <a href="#" class="news-link">Opširnije</a>
+          </div>
+
+        </div>
+
+        <div class="news-box">
+
+          <div class="news-box-img">
+            <img src="Slike/futsal4.jpg" class="news-img">
+          </div>
+
+          <div class="news-box-info">
+            <h3 class="news-box-h3">Sezonsko iznenađenje lige</h3>
+            <p class="news-box-p">Osvrt na sezonske uspone i padove: Razotkrivanje neočekivanih rezultata, ozljeda i strategija koje formiraju sliku o kretanju snage unutar studentske nogometne lige.</p>
+            <a href="#" class="news-link">Opširnije</a>
+          </div>
+
+        </div>
+
+      
+        <div class="news-box">
+
+          <div class="news-box-img">
+            <img src="Slike/futsal5.jpg" class="news-img">
+          </div>
+
+          <div class="news-box-info">
+            <h3 class="news-box-h3">"Title race" u Splitu!</h3>
+            <p class="news-box-p">Uzbudljiva trka za vrh tablice: Analiza ključnih utakmica i igračkih performansi koje su obilježile posljednje kolo. U kojem smjeru će sve otići? Saznajte u članku.</p>
+            <a href="#" class="news-link">Opširnije</a>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- Ovdje idu vijesti -->
+      <!-- Koristiti box izgleed ? -->
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <div class="gallery-container">
+      <h2 class="gallery-title">Galerija</h2>
+      <img src="Slike/SCST.png" class="proba">
+      <img src="Slike/SCST.png" class="proba">
+      <img src="Slike/SCST.png" class="proba">
+
+      <!-- ovdje idu slike -->
+    </div>
+  </section>
+
+
+
+  <button class="go_top_btn">
+    <a><i class="fa-solid fa-chevron-up goTopIcon"></i></a>
+  </button>
+
+  <section class="footer" id="footer">
+    <div class="social">
+      <a href="https://www.unisport.hr/hr" class="footicon"><i class="fab fa-instagram footicon"></i></a>
+      <a href="https://www.unisport.hr/hr" class="footicon"><i class="fab fa-x-twitter footicon"></i></a>
+      <a href="https://www.unisport.hr/hr" class="footicon"><i class="fab fa-facebook-f footicon"></i></a>
+    </div>
+    <ul class="list">
+      <li>
+        <a href="index.html#standings">Tablica</a>
+    </li>
+    <li>
+        <a href="index.html#news">Vijesti</a>
+    </li>
+    <li>
+        <a href="index.html#gallery">Galerija</a>
+    </li>
+    <li>
+        <a href="prijavaKapetan.html">Prijava kapetana</a>
+    </li>
+    <li>
+        <a href="PrijavaOrganizator.html">Prijava voditelja</a>
+    </li>
+
+    </ul>
+    <p class="copyright">Sveučilišna nogometna liga @ 2023</p>
+  </section>
+  <!--Skripte JS datoteka ispod ove linije-->
+  <script src="./JS/scroll_to_top.js"></script>
+  <script src="./JS/navbar.js"></script>
+  <!--Skripte JS datoteka iznad ove linije-->
+
+</body>
+
+</html>
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hedvig+Letters+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
 * {
   box-sizing: border-box;
@@ -63,8 +251,8 @@ nav ul li {
 }
 nav ul li a {
   text-decoration: none;
-  color: #000000;
-  font-size: 95%;
+  color:  #033E6A;
+  font-size: 100%px;
   font-weight: 400;
   padding: 4px 8px;
   border-radius: 5px;
@@ -73,6 +261,10 @@ nav ul li a {
 nav ul li a:hover {
   background-color: #f5f5f5;
 }
+
+
+
+
 
 
 .hamburger {
@@ -159,6 +351,8 @@ nav ul li a:hover {
   margin-right: 10px;
 }
 
+
+
 @media screen and (max-width: 790px) {
   .hamburger {
     display: block;
@@ -173,6 +367,11 @@ nav ul li a:hover {
 
  .footer {
   background-color: transparent; 
+}
+
+.news-box{
+  width: auto;
+  height: auto;
 }
 
 .footer .social,
@@ -228,16 +427,8 @@ nav ul li a:hover {
   
 }
 
-/*ovaj element "proba" kasnije ukloniti*/
-.proba{
-  width: auto;
-  max-width: 100%;
-}
-
-
-
 .footer {
-  padding: 40px 0;
+  padding: 40px;
   background-color: #033E6A;
 }
 .footer .social {
@@ -298,3 +489,109 @@ nav ul li a:hover {
   background-color: #033E6A;
 
 }
+
+
+
+.news-title{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  
+  
+}
+
+.news-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 100px;
+
+}
+
+
+.news-box{
+  display: inline-block;
+  background-color: #fcfefe;
+  border-radius: 7px;
+  box-shadow: 2px 15px 15px 0px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  width: 350px;
+  flex-direction: column;
+  padding: 20px;
+
+}
+
+.news-box-img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+ 
+ }
+
+ .news-img{
+     width: 35vh;
+     height: 45vh;
+     border-radius: 10px;
+     margin-bottom: 9px;
+     object-fit: cover;
+ 
+ }
+ 
+
+.news-box-h3{
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+
+.news-box-p{
+  text-align: center;
+  font-family: 'Hedvig Letters Sans', sans-serif;
+}
+
+
+.news-link{
+  color: #36B20B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+
+.standings-title{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+.gallery-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.gallery-title{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+
+.gallery-img{
+  /*nek stoji zasad ovako dok sutra/prekosutra ne napravim JS slider*/
+  width: 30vh;
+  height: 30vh;
+  max-width: 100%;
+}
+
+
