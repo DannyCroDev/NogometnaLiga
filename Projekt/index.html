@@ -69,6 +69,7 @@
 
 
 
+
   <!-- Section za tablicu -->
   <section id="standings">
     <div class="container">
@@ -77,7 +78,7 @@
   </section>
 
   <!-- Section za vijesti -->
-  <section id="news">
+  <section id="news" class="news">
       <h2 class="news-title">Zanimiljivosti i događaji</h2>
       <div class="news-container">
 
@@ -129,21 +130,38 @@
       <!-- Koristiti box izgleed ? -->
   </section>
 
-  <!-- Gallery Section -->
-  <section id="gallery">
-    <h2 class="gallery-title">Galerija</h2>
-    <div class="gallery-container">
-      <img src="Slike/liga1.jpg" class="gallery-img">
-      <img src="Slike/liga2.webp" class="gallery-img">
-      <img src="Slike/liga3.jpg" class="gallery-img">
-      <img src="Slike/futsal1.jpg" class="gallery-img">
-      <img src="Slike/futsal3.webp" class="gallery-img">
-      <img src="Slike/futsal6.jpg" class="gallery-img">
+  <!-- Gallery Section -->    
+  <h2 class="gallery-title">Galerija</h2>
 
-      <!-- ovdje idu slike -->
+  <section id="gallery" class="gallery">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+      <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="Slike/futsal1.jpg" alt="photo">
+        </li>
+        <li class="slide">
+          <img src="Slike/futsal3.webp" alt="photo">
+        </li>
+        <li class="slide">
+          <img src="Slike/futsal6.jpg" alt="photo">
+        </li>
+        <li class="slide" data-active>
+          <img src="Slike/liga1.jpg" alt="photo">
+        </li>
+        <li class="slide" data-active>
+          <img src="Slike/liga2.webp" alt="photo">
+        </li>
+      </ul>
     </div>
-  </section>
 
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+
+  </section>
 
 
   <button class="go_top_btn">
@@ -179,6 +197,9 @@
   <!--Skripte JS datoteka ispod ove linije-->
   <script src="./JS/scroll_to_top.js"></script>
   <script src="./JS/navbar.js"></script>
+  <script src="JS/slideshow.js"></script>
+  <script src="JS/image_modal.js"></script>
+
   <!--Skripte JS datoteka iznad ove linije-->
 
 </body>
