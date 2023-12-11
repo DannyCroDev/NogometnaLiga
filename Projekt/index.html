@@ -1,67 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Sveucilisna nogometna liga</title>
-    <link rel="stylesheet" href="CSS/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" target="_blank" href="CSS/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
+  <nav>
+    <div class="logo">
+      <a href="index.html"><img src="Slike/SCST.png" alt="logo" class="headerImg" /></a>
+      <h1>SCST</h1>
+    </div>
+    <ul>
+      <li>
+        <a href="#standings">Tablica</a>
+      </li>
+      <li>
+        <a href="#news">Vijesti</a>
+      </li>
+      <li>
+        <a href="#gallery">Galerija</a>
+      </li>
+      <li>
+        <a href="#footer">Info</a>
+      </li>
+      <li>
+        <a href="prijavaKapetan.html">Prijava kapetana</a>
+      </li>
+      <li>
+        <a href="PrijavaOrganizator.html">Prijava voditelja</a>
+      </li>
+    </ul>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+  </nav>
+  <div class="menubar">
 
-    <!-- Header Section -->
-    <header>
-        <div class="container">
-            <img src="Slike/your-header-image.png" alt="Header Image">
-            <!-- Navbar -->
-            <nav>
-                <div class="navbar">
-                  <div class="logo"><a href="#">Studentska liga</a></div>
-                  <ul class="menu">
-                    <li><a href="#standings">Tablica</a></li>
-                    <li><a href="#news">Vijesti</a></li>
-                    <li><a href="#gallery">Galerija</a></li>
-                    <li><a href="#footer">O ligi</a></li>
-                    <li><a href="#footer">Prijava kapetana</a></li>
-                    <li><a href="#footer">Prijava voditelja</a></li>
-                  </ul>
-                </div>
-              </nav>
+    <ul>
+      <div class="logo">
+        <img src="Slike/SCST.png" alt="logo" class="headerImg" />
+      </div>
+      <li>
+        <a href="#standings">Tablica</a>
+      </li>
+      <li>
+        <a href="#news">Vijesti</a>
+      </li>
+      <li>
+        <a href="#gallery">Galerija</a>
+      </li>
+      <li>
+        <a href="prijavaKapetan.html">Prijava kapetana</a>
+      </li>
+      <li>
+        <a href="PrijavaOrganizator.html">Prijava voditelja</a>
+      </li>
+    </ul>
+  </div>
+
+
+
+
+  <!-- Section za tablicu -->
+  <section id="standings">
+    <div class="container">
+      <h2 class="standings-title">Tablica rezultata</h2>
+    </div>
+  </section>
+
+  <!-- Section za vijesti -->
+  <section id="news" class="news">
+      <h2 class="news-title">Zanimiljivosti i događaji</h2>
+      <div class="news-container">
+
+        <div class="news-box">
+
+          <div class="news-box-img">
+            <img src="Slike/futsal2.jpg" class="news-img">
+          </div>
+
+          <div class="news-box-info">
+            <h3 class="news-box-h3">Prvi rezultati su tu</h3>
+            <p class="news-box-p">Najnoviji rezultati i taktički potezi oblikuju dinamičnu sezonu studentske nogometne lige, otkrivamo kako vodeći timovi balansiraju između izazova i uspjeha na terenu.</p>
+            <a href="#" class="news-link">Opširnije</a>
+          </div>
+
         </div>
-    </header>
 
-    <!-- Section za tablicu -->
-    <section id="standings">
-        <div class="container">
-            <h2>Tablica rezultata</h2>
+        <div class="news-box">
+
+          <div class="news-box-img">
+            <img src="Slike/futsal4.jpg" class="news-img">
+          </div>
+
+          <div class="news-box-info">
+            <h3 class="news-box-h3">Sezonsko iznenađenje lige</h3>
+            <p class="news-box-p">Osvrt na sezonske uspone i padove: Razotkrivanje neočekivanih rezultata, ozljeda i strategija koje formiraju sliku o kretanju snage unutar studentske nogometne lige.</p>
+            <a href="#" class="news-link">Opširnije</a>
+          </div>
+
         </div>
-    </section>
 
-    <!-- Section za vijesti -->
-    <section id="news">
-        <div class="container">
-            <h2>Zanimiljivosti i događaji</h2>
-            <!-- Ovdje idu vijesti -->
-            <!-- Koristiti box izgleed ? -->
+      
+        <div class="news-box">
+
+          <div class="news-box-img">
+            <img src="Slike/futsal5.jpg" class="news-img">
+          </div>
+
+          <div class="news-box-info">
+            <h3 class="news-box-h3">"Title race" u Splitu!</h3>
+            <p class="news-box-p">Uzbudljiva trka za vrh tablice: Analiza ključnih utakmica i igračkih performansi koje su obilježile posljednje kolo. U kojem smjeru će sve otići? Saznajte u članku.</p>
+            <a href="#" class="news-link">Opširnije</a>
+          </div>
+
         </div>
-    </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <div class="container">
-            <h2>Galerija</h2>
-            <!-- ovdje idu slike -->
-        </div>
-    </section>
+      </div>
+      <!-- Ovdje idu vijesti -->
+      <!-- Koristiti box izgleed ? -->
+  </section>
 
-    <!-- Footer Section -->
-    <footer id="footer">
-        <div class="container">
-            <p>&copy; 2023 studentska sveučilišna liga</p>
-        </div>
-    </footer>
+  <!-- Gallery Section -->    
+  <h2 class="gallery-title">Galerija</h2>
 
-    <!--Skripte JS datoteka ispod ove linije-->
-    <script></script>
-    <!--Skripte JS datoteka iznad ove linije-->
+  <section id="gallery" class="gallery">
+    <div class="carousel" data-carousel>
+      <button class="carousel-button prev" data-carousel-button="prev">&#8656;</button>
+      <button class="carousel-button next" data-carousel-button="next">&#8658;</button>
+      <ul data-slides>
+        <li class="slide" data-active>
+          <img src="Slike/futsal1.jpg" alt="photo">
+        </li>
+        <li class="slide">
+          <img src="Slike/futsal3.webp" alt="photo">
+        </li>
+        <li class="slide">
+          <img src="Slike/futsal6.jpg" alt="photo">
+        </li>
+        <li class="slide" data-active>
+          <img src="Slike/liga1.jpg" alt="photo">
+        </li>
+        <li class="slide" data-active>
+          <img src="Slike/liga2.webp" alt="photo">
+        </li>
+      </ul>
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+
+  </section>
+
+
+  <button class="go_top_btn">
+    <a><i class="fa-solid fa-chevron-up goTopIcon"></i></a>
+  </button>
+
+  <section class="footer" id="footer">
+    <div class="social">
+      <a href="https://www.unisport.hr/hr" class="footicon"><i class="fab fa-instagram footicon"></i></a>
+      <a href="https://www.unisport.hr/hr" class="footicon"><i class="fab fa-x-twitter footicon"></i></a>
+      <a href="https://www.unisport.hr/hr" class="footicon"><i class="fab fa-facebook-f footicon"></i></a>
+    </div>
+    <ul class="list">
+      <li>
+        <a href="index.html#standings">Tablica</a>
+    </li>
+    <li>
+        <a href="index.html#news">Vijesti</a>
+    </li>
+    <li>
+        <a href="index.html#gallery">Galerija</a>
+    </li>
+    <li>
+        <a href="prijavaKapetan.html">Prijava kapetana</a>
+    </li>
+    <li>
+        <a href="PrijavaOrganizator.html">Prijava voditelja</a>
+    </li>
+
+    </ul>
+    <p class="copyright">Sveučilišna nogometna liga @ 2023</p>
+  </section>
+  <!--Skripte JS datoteka ispod ove linije-->
+  <script src="./JS/scroll_to_top.js"></script>
+  <script src="./JS/navbar.js"></script>
+  <script src="JS/slideshow.js"></script>
+  <script src="JS/image_modal.js"></script>
+
+  <!--Skripte JS datoteka iznad ove linije-->
 
 </body>
+
 </html>
