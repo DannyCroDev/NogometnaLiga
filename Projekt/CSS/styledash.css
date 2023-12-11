@@ -66,13 +66,22 @@
     text-decoration-color: #1c6da8;
 }
 
+.logout-button{
+    text-align: center;
+}
 
-/*tablica s popisom igrača:
 
-/* Kapetan Dashboard 2 CSS */
+
+
+/*tablica s popisom igrača:*/
+
+
 
 body {
     font-family: "Poppins", sans-serif;
+    background-image: url("https://www.scst.unist.hr/images/documents/6/eksterijer%20(11).jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .table-container {
@@ -118,6 +127,13 @@ th {
 .logo {
     width: 150px;
     height: auto;
+}
+
+table tbody tr {
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
 }
 
 /* Dodatni stil za tablicu na mobilnim uređajima */
