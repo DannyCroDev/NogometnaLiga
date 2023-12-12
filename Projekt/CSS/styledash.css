@@ -1,0 +1,172 @@
+/* Kapetan Dashboard CSS */
+
+#teamForm {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 50px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#teamForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+#teamForm input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#teamForm button {
+    background-color: #033E6A;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#teamForm button:hover {
+    background-color: #1c6da8;
+}
+
+/* Dodatni stil za checkbox ako ga imaš u formi */
+#teamForm input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 150px; 
+    height: auto; 
+}
+
+.right h5 {
+    text-align: center;
+}
+
+.button{
+    text-align:center;
+    opacity: 0.8;
+    color: whitesmoke;
+    text-decoration-color: #1c6da8;
+}
+
+.logout-button{
+    text-align: center;
+}
+
+
+
+
+/*tablica s popisom igrača:*/
+
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    /*background-image: url("https://www.scst.unist.hr/images/documents/6/eksterijer%20(11).jpg");*/
+    background-size: cover;
+    background-position: center;
+}
+
+.table-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 50px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.table-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #033E6A;
+    color: #fff;
+}
+
+/* Dodatni stil za logo */
+.logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+table tbody tr {
+    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+/* Dodatni stil za tablicu na mobilnim uređajima */
+@media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tbody tr {
+        margin-bottom: 20px;
+        display: block;
+        border: 1px solid #ddd;
+    }
+
+    table tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    table tbody td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-right: 10px;
+    }
+}
+
+
+
