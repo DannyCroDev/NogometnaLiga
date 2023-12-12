@@ -1,0 +1,692 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+
+}
+
+/* Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+nav {
+    padding: 1px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    z-index: 1;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    height: 120px;
+    width: auto;
+    margin-right: 10px;
+}
+
+nav .logo h1 {
+    font-size: 1.1rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15%;
+
+    background: linear-gradient(to right, #033E6A 0%, #033E6A 100%);
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #f5f5f5;
+}
+
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 1px;
+    background-color: #1f1f1f;
+    display: block;
+    margin: 7px auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger-active {
+    transition: all 0.3s ease-in-out;
+    transition-delay: 0.6s;
+    transform: rotate(45deg);
+}
+
+.hamburger-active .line:nth-child(2) {
+    width: 0px;
+}
+
+.hamburger-active .line:nth-child(1),
+.hamburger-active .line:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.hamburger-active .line:nth-child(1) {
+    transform: translateY(12px);
+}
+
+.hamburger-active .line:nth-child(3) {
+    transform: translateY(-5px) rotate(90deg);
+}
+
+.menubar {
+    position: absolute;
+    top: 0;
+    left: -60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 60%;
+    height: 100vh;
+    padding: 20% 0;
+    background: rgba(255, 255, 255);
+    transition: all 0.5s ease-in;
+    z-index: 2;
+}
+
+.active {
+    left: 0;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.menubar ul {
+    padding: 0;
+    list-style: none;
+}
+
+.menubar ul li {
+    margin-bottom: 32px;
+}
+
+.menubar ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 95%;
+    font-weight: 400;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menubar ul li a:hover {
+    background-color: #38B6FF;
+    opacity: 0.8;
+    color: whitesmoke;
+}
+
+.menubar .logo img {
+    height: 100px;
+    width: auto;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 790px) {
+    .hamburger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    * {
+        background-color: white;
+    }
+
+    .footer {
+        background-color: transparent;
+    }
+
+    .footer .social,
+    .footer .footicon,
+    .footer ul,
+    .footer ul li,
+    .footer ul a,
+    .footer .copyright {
+        color: white;
+        opacity: 1;
+        background-color: transparent;
+    }
+
+}
+
+
+
+
+.go_top_btn {
+    border: none;
+    background: transparent;
+    position: fixed;
+    bottom: 20px;
+    right: 25px;
+    z-index: 99;
+}
+
+.go_top_btn a {
+    line-height: 60px;
+    text-align: center;
+    color: black;
+    background-color: rgb(178, 213, 234);
+    border-radius: 25px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+}
+
+
+.go_top_btn :hover {
+    cursor: pointer;
+    background-color: #38B6FF;
+}
+
+.goTopIcon {
+    background-color: transparent;
+    display: inline-block;
+
+}
+
+/*ovaj element "proba" kasnije ukloniti*/
+.proba {
+    width: auto;
+    max-width: 100%;
+}
+
+
+
+.footer {
+    padding: 40px 0;
+    background-color: #033E6A;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+    color: white;
+    background-color: #033E6A;
+
+}
+
+.footer .social a {
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid white;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+    opacity: 0.75;
+
+}
+
+.footer .social a:hover {
+    opacity: 0.9;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    background-color: #033E6A;
+
+}
+
+.footer ul a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+    background-color: #033E6A;
+    color: white;
+
+}
+
+.footer ul a:hover {
+    opacity: 1;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    background-color: #033E6A;
+
+}
+
+
+/*CSS ZA PRIJAVU KORISNIKA I ADMINA*/
+
+.box-form {
+    margin: 50px auto;
+    width: 80%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex: 1 1 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 50px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+@media (max-width: 980px) {
+    .box-form {
+        flex-flow: wrap;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+.box-form div {
+    height: auto;
+}
+
+.box-form .left {
+    color: #FFFFFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://www.scst.unist.hr/images/documents/6/eksterijer%20(11).jpg");
+    overflow: hidden;
+    width: 50%;
+}
+
+.box-form .left .overlay {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    background: #033E6Aad;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.box-form .left .overlay h1 {
+    font-size: 10vmax;
+    line-height: 1;
+    font-weight: 900;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 110px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.box-form .left .overlay span p {
+    margin-top: 30px;
+    font-weight: 900;
+}
+
+.box-form .left .overlay span a {
+    background: #3b5998;
+    color: #FFFFFF;
+    margin-top: 10px;
+    padding: 14px 50px;
+    border-radius: 100px;
+    display: inline-block;
+    box-shadow: 0 3px 6px 1px #042d4657;
+}
+
+.box-form .left .overlay span a:last-child {
+    background: #1dcaff;
+    margin-left: 30px;
+}
+
+.box-form .right {
+    padding: 40px;
+    overflow: hidden;
+    width: 50%;
+}
+
+@media (max-width: 980px) {
+    .box-form .right {
+        width: 100%;
+    }
+
+    .box-form .left {
+        width: 100%;
+    }
+
+    .box-form .left .overlay h1 {
+        font-size: 10vmax;
+        line-height: 1;
+        font-weight: 900;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 50px;
+        text-align: center;
+        opacity: 1;
+        color: white;
+        background-color: transparent;
+    }
+}
+
+.box-form .right h5 {
+    font-size: 6vmax;
+    line-height: 0;
+}
+
+.box-form .right p {
+    font-size: 14px;
+    color: #B0B3B9;
+}
+
+.box-form .right .inputs {
+    overflow: hidden;
+}
+
+.box-form .right input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 25px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #B0B3B9;
+}
+
+.box-form .right .remember-me--forget-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-form .right .remember-me--forget-password input {
+    margin: 0;
+    margin-right: 7px;
+    width: auto;
+}
+
+.box-form .right button {
+    float: right;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 35px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background-image: linear-gradient(135deg, #033E6A 10%, #033E6A 100%);
+}
+
+.box-form .right button:hover {
+    box-shadow: 0px 4px 20px 0px black;
+}
+
+label {
+    display: block;
+    position: relative;
+    margin-left: 30px;
+}
+
+label::before {
+    content: ' \f00c';
+    position: absolute;
+    font-family: FontAwesome;
+    background: transparent;
+    border: 3px solid #70F570;
+    border-radius: 4px;
+    color: transparent;
+    left: -30px;
+    transition: all 0.2s linear;
+}
+
+label:hover::before {
+    font-family: FontAwesome;
+    content: ' \f00c';
+    color: #fff;
+    cursor: pointer;
+    background: #70F570;
+}
+
+label:hover::before .text-checkbox {
+    background: #70F570;
+}
+
+label span.text-checkbox {
+    display: inline-block;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+label input[type="checkbox"] {
+    display: none;
+}
+
+/*REGISTRACIJA KAPETANA*/
+
+.box-form-rk {
+    margin: 50px auto;
+    width: 80%;
+    background: #ffffff8c;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex: 1 1 100%;
+    align-items: stretch;
+    justify-content: space-between;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 50px -1px,
+        rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+@media (max-width: 980px) {
+    .box-form-rk {
+        flex-flow: wrap;
+        text-align: center;
+        align-content: center;
+        align-items: center;
+    }
+}
+
+.box-form-rk {
+    height: auto;
+}
+
+.box-form-rk .left {
+    color: #FFFFFF;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://www.scst.unist.hr/images/documents/6/eksterijer%20(11).jpg");
+    overflow: hidden;
+    width: 50%;
+}
+
+.box-form-rk .left .overlay {
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    background: #033E6Aad;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.box-form-rk .left .overlay h1 {
+    font-size: 10vmax;
+    line-height: 1;
+    font-weight: 900;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 110px;
+    text-align: center;
+    opacity: 0.8;
+}
+
+.box-form-rk .left .overlay span p {
+    margin-top: 30px;
+    font-weight: 900;
+}
+
+.box-form-rk .left .overlay span a {
+    background: #3b5998;
+    color: #FFFFFF;
+    margin-top: 10px;
+    padding: 14px 50px;
+    border-radius: 100px;
+    display: inline-block;
+    box-shadow: 0 3px 6px 1px #042d4657;
+}
+
+.box-form-rk .left .overlay span a:last-child {
+    background: #1dcaff;
+    margin-left: 30px;
+}
+
+.box-form-rk .right {
+    padding: 40px;
+    overflow: hidden;
+    width: 50%;
+}
+
+.box-form-rk .right h5 {
+    font-size: 6vmax;
+    line-height: 0;
+    text-align: center;
+}
+
+@media (max-width: 980px) {
+    .box-form-rk .right {
+        width: 100%;
+    }
+
+    .box-form-rk .left {
+        width: 100%;
+    }
+
+    .box-form-rk .left .overlay h1 {
+        font-size: 10vmax;
+        line-height: 1;
+        font-weight: 900;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        font-size: 50px;
+        text-align: center;
+        opacity: 1;
+        color: white;
+        background-color: transparent;
+    }
+
+    .box-form-rk .right h5 {
+        font-size: 4vmax;
+        line-height: 0;
+        text-align: center;
+    }
+
+
+}
+
+
+.box-form-rk .right p {
+    font-size: 14px;
+    color: #B0B3B9;
+}
+
+.box-form-rk .right .inputs {
+    overflow: hidden;
+}
+
+.box-form-rk .right input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 25px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #B0B3B9;
+}
+
+.box-form-rk .right .remember-me--forget-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-form-rk .right .remember-me--forget-password input {
+    margin: 0;
+    margin-right: 7px;
+    width: auto;
+}
+
+.box-form-rk .right button {
+    float: right;
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 35px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 0;
+    outline: 0;
+    background-image: linear-gradient(135deg, #033E6A 10%, #033E6A 100%);
+}
+
+.box-form-rk .right button:hover {
+    box-shadow: 0px 4px 20px 0px black;
+
+}
+

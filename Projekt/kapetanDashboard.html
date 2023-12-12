@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" target="_blank" href="CSS/styledash.css" />
+  <title>Kapetan Dashboard</title>
+</head>
+<body>
+  <div class="logo-container">
+    <img src="SLIKE/SCST.png" alt="Logo" class="logo">
+  </div>
+
+  <div class="box-form">
+    <div class="right">
+      <h5>Unesi Podatke za igrače</h5>
+      <form id="teamForm" class="inputs">
+
+        <label for="ime">Ime:</label>
+        <input type="text" id="ime" name="ime" required>
+
+        <label for="prezime">Prezime:</label>
+        <input type="text" id="prezime" name="prezime" required>
+
+        <label for="godine">Godine:</label>
+        <input type="number" id="godine" name="godine" required>
+
+        <label for="brojIgraca">Broj Igrača:</label>
+        <input type="number" id="brojIgraca" name="brojIgraca" required>
+
+        <div class="position-container">
+          <label for="pozicija">Pozicija igrača:</label>
+          <select id="pozicija" name="pozicija" required>
+            <option value="napad">Napad</option>
+            <option value="sredina">Sredina</option>
+            <option value="obrana">Obrana</option>
+            <option value="golman">Golman</option>
+          </select>
+        </div>
+
+        <div class="button">
+          <button type="submit">Spremi</button>
+        </div>
+
+      </form>
+
+      <div class="table-container">
+        <h2>Informacije o igračima</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Ime</th>
+                    <th>Prezime</th>
+                    <th>Godine</th>
+                    <th>Broj Igrača</th>
+                    <th>Pozicija</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Zamijeni ovo sa stvarnim podacima kad ih uneseš -->
+                <tr>
+                    <td>Primjer</td>
+                    <td>Igrač</td>
+                    <td>25</td>
+                    <td>10</td>
+                    <td>Napad</td>
+                </tr>
+
+                <tr>
+                    <td>Primjer2</td>
+                    <td>Igrač2</td>
+                    <td>22</td>
+                    <td>1</td>
+                    <td>Golman</td>
+                </tr>
+
+                <tr>
+                    <td>Primjer3</td>
+                    <td>Igrač3</td>
+                    <td>21</td>
+                    <td>2</td>
+                    <td>sredina</td>
+                </tr>
+                
+                <tr>
+                    <td>Primjer4</td>
+                    <td>Igrač</td>
+                    <td>19</td>
+                    <td>4</td>
+                    <td>Obrana</td>
+                </tr>
+
+            </tbody>
+            
+        </table>
+    </div>
+    
+  </div>
+  <div class = "button">
+    <h6><button type ="sumbit">Odjava</button></h6>
+  </div>
+</body>
+</html>
