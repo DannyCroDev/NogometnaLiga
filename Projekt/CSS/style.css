@@ -24,10 +24,12 @@ body::-webkit-scrollbar {
 }
 
 body {
+
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+
 }
 
 
@@ -57,7 +59,9 @@ nav .logo h1 {
   justify-content: center;
   align-items: center;
   margin-top: 15%;
+
   background: linear-gradient(to right, #033E6A 0%, #033E6A 100%);
+
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,6 +79,7 @@ nav ul li {
 nav ul li a {
   text-decoration: none;
   color: #033E6A;
+
   font-size: 100%px;
   font-weight: 400;
   padding: 4px 8px;
@@ -212,17 +217,22 @@ nav ul li a:hover {
     background-color: transparent;
   }
 
+
 }
 
 /* MEDIA QUERIES */
 
 h2 {
+
   font-family: 'Raleway', sans-serif;
   color: #033E6A;
 }
 
 
+
 .go_top_btn {
+
+
   border: none;
   background: transparent;
   position: fixed;
@@ -255,6 +265,7 @@ h2 {
   background-color: transparent;
   display: inline-block;
   color: #033E6A;
+
 
 }
 
@@ -290,6 +301,7 @@ h2 {
   opacity: 0.9;
 }
 
+
 .footer ul {
   margin-top: 0;
   padding: 0;
@@ -320,6 +332,7 @@ h2 {
   opacity: 1;
 }
 
+
 .footer .copyright {
   margin-top: 15px;
   text-align: center;
@@ -342,6 +355,7 @@ h2 {
 }
 
 .news-container {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -353,6 +367,7 @@ h2 {
 
 
 .news-box {
+
   display: inline-block;
   background-color: #fcfefe;
   border-radius: 7px;
@@ -371,6 +386,7 @@ h2 {
 }
 
 .news-box-img {
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -400,6 +416,7 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+
   font-family: 'Roboto Condensed', sans-serif;
   color: #033E6A;
 
@@ -407,6 +424,7 @@ h2 {
 
 
 .news-box-p {
+
   text-align: center;
   font-family: 'Hedvig Letters Sans', sans-serif;
 }
@@ -414,6 +432,7 @@ h2 {
 
 .news-link {
   color: #033E6A;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -425,12 +444,14 @@ h2 {
 
 
 .standings-title {
+
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
 .gallery {
+
   margin-top: 2.5em;
   margin-bottom: 2.5em;
   justify-content: center;
@@ -440,6 +461,7 @@ h2 {
 }
 
 .gallery-title {
+
   margin-top: 2.5em;
   justify-content: center;
   align-items: center;
@@ -455,11 +477,13 @@ h2 {
   position: relative;
   overflow: hidden;
   border-radius: 15px;
+
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 
 }
 
 .carousel>ul {
+
   margin: 0;
   padding: 0;
   list-style: none;
@@ -477,6 +501,7 @@ h2 {
 }
 
 .slide>img {
+
   display: block;
   width: 100%;
   height: 100%;
@@ -711,3 +736,4 @@ h2 {
     height: 100%;
   }
 }
+
