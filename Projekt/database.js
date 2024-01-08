@@ -11,12 +11,17 @@ const firebaseConfig = {
     appId: "1:899310206855:web:6e3fbd880928bdf4dc9d22"
   };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export function saveData(ekipa) {
+export function saveData(ekipa, ime, prezime, pozicija, brojIgraca) {
   const db = getDatabase(app);
-  set(ref(db, 'timovi/' + ekipa), {
-    nazivEkipe: ekipa
+  push(ref(db, 'timovi/' + ekipa), {
+    nazivEkipe: ekipa,
+    igrac:{
+        ime: ime,
+        prezime: prezime,
+        pozicija: pozicija,
+        brojIgraca: brojIgraca
+    }
   });
 }
