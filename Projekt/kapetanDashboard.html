@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" target="_blank" href="CSS/styledash.css" />
   <title>Kapetan Dashboard</title>
+ 
 </head>
 <body>
   <div class="logo-container">
@@ -19,7 +20,7 @@
         <input type="text" id="ekipa" name="ekipa" required>
 
         <div class="button">
-          <button type="submit">Spremi</button>
+          <button type="submit" class="spremiEkipu" id="spremiEkipu" onclick="saveData()">Spremi</button>
         </div>
 
       </form>
@@ -27,7 +28,7 @@
   <div class="box-form">
     <div class="right">
       <h5>Unesi Podatke za igrače</h5>
-      <form id="teamForm" class="inputs">
+      <form id="playerForm" class="inputs">
 
 
         <label for="ime">Ime:</label>
@@ -112,5 +113,6 @@
   <div class = "button">
     <h6><button type ="sumbit">Odjava</button></h6>
   </div>
+
 </body>
 </html>
