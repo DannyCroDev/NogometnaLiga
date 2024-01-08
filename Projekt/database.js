@@ -25,3 +25,11 @@ export function saveData(ekipa, ime, prezime, pozicija, brojIgraca) {
     }
   });
 }
+
+export function saveCapAcc(cap_username, cap_password){
+    const db = getDatabase(app);
+    push(ref(db, 'računiKapetana/' + cap_username), {
+        cap_username:  cap_username,
+       cap_password: cap_password
+      });
+}

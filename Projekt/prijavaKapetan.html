@@ -80,16 +80,16 @@
         <div class="right">
             <h5>Prijava</h5>
             <p><a href="registracijaKapetan.html">Kreiraj račun</a></p>
-            <div class="inputs">
-                <input type="text" placeholder="Korisničko ime">
+            <form class="inputs" id="capInputs">
+                <input type="text" placeholder="Korisničko ime" id="cap_username" name="cap_username" required>
                 <br>
-                <input type="password" placeholder="Lozinka">
-            </div>
+                <input type="password" placeholder="Lozinka" id="cap_password" name="cap_password" required>
+                <br>
+                <br>
+                <button type="submit">Prijavi se</button>
+            </form>
 
-            <br><br>
-
-            <br>
-            <button>Prijava</button>
+            
         </div>
 
     </div>
@@ -130,6 +130,8 @@
 
     </section>
     <!--Skripte JS datoteka ispod ove linije-->
+    <script type="module" src="./loginCapDB.js"></script>
+
     <script src="./JS/scroll_to_top.js"></script>
     <script src="./JS/navbar.js"></script>
     <!--Skripte JS datoteka iznad ove linije-->
