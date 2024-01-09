@@ -80,16 +80,15 @@
         <div class="right">
             <h5>Prijava</h5>
             <p><a href="registracijaOrganizator.html">Kreiraj račun</a></p>
-            <div class=" inputs">
-                <input type="text" placeholder="Korisničko ime">
+            <form class=" inputs" id="adminInputs">
+                <input type="text" placeholder="Korisničko ime" id="admin_username">
                 <br>
-                <input type="password" placeholder="Lozinka">
-            </div>
+                <input type="password" placeholder="Lozinka" id="admin_password">        
+                <br><br>
+                <br>
+                <button>Prijava</button>
+            </form>
 
-            <br><br>
-
-            <br>
-            <button>Prijava</button>
         </div>
 
     </div>
@@ -129,6 +128,8 @@
         <p class="copyright">Sveučilišna nogometna liga @ 2023</p>
 
     </section>
+    <script type="module" src="./loginAdmin.js"></script>
+
     <!--Skripte JS datoteka ispod ove linije-->
     <script src="./JS/scroll_to_top.js"></script>
     <script src="./JS/navbar.js"></script>

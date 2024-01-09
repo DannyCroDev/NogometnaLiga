@@ -30,7 +30,7 @@ export function saveData(ekipa, ime, prezime, pozicija, brojIgraca) {
 
 export function saveCapAcc(cap_username, cap_password){
     const db = getDatabase(app);
-    push(ref(db, 'računiKapetana/' + cap_username), {
+    push(ref(db, 'Računi kapetana/' + cap_username), {
         cap_username:  cap_username,
         cap_password: cap_password
       });
@@ -40,12 +40,36 @@ export function registerCapAcc(register_capName, register_capLastname, register_
   const db = getDatabase(app);
   const uniqueId = nanoid();
 
-  push(ref(db, 'registracijeRačuna/' + uniqueId), {
+  push(ref(db, 'Registracija kapetana/' + uniqueId), {
       reg_ime: register_capName,
       reg_prezime: register_capLastname,
       reg_lozinka: register_capCode,
       reg_email: register_capEmail
   });
   console.log(uniqueId);
+
+}
+
+
+
+export function saveAdminAcc(admin_username, admin_password){
+  const db = getDatabase(app);
+  push(ref(db, 'Računi voditelja/' + admin_username), {
+      admin_username:  admin_username,
+      admin_password: admin_password
+    });
+}
+
+export function registerAdminAcc(register_adminName, register_adminLastname, register_adminCode, register_adminEmail){
+const db = getDatabase(app);
+const uniqueId = nanoid();
+
+push(ref(db, 'Registracija voditelja/' + uniqueId), {
+    reg_ime: register_adminName,
+    reg_prezime: register_adminLastname,
+    reg_lozinka: register_adminCode,
+    reg_email: register_adminEmail
+});
+console.log(uniqueId);
 
 }
