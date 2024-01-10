@@ -40,6 +40,17 @@
     background-color: #1c6da8;
 }
 
+
+.firstandlast {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+.floating-input {
+  float: left;
+  margin-right: 20px;
+}
+
 /* Dodatni stil za checkbox ako ga imaš u formi */
 #teamForm input[type="checkbox"] {
     margin-right: 5px;
