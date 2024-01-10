@@ -17,6 +17,8 @@ const app = initializeApp(firebaseConfig);
 export function saveData(ekipa, ime, prezime, pozicija, brojIgraca) {
   const db = getDatabase(app);
   const nazivEkipe = ekipa;
+  
+
   push(ref(db, 'timovi/' + ekipa), {
     igrac:{
         ime: ime,
@@ -25,6 +27,8 @@ export function saveData(ekipa, ime, prezime, pozicija, brojIgraca) {
         brojIgraca: brojIgraca
     }
   });
+
+
 }
 
 export function saveCapAcc(cap_username, cap_password){
@@ -78,13 +82,31 @@ console.log(uniqueId);
 export function readTeamData(ekipa){
   const db = getDatabase();
   const teamRef = ref(db, `timovi/${ekipa}`);
+  const tableBody = document.querySelector('.table-container table tbody');
+  
+    tableBody.innerHTML = '';
+    get(teamRef).then((snapshot) => {
+  
 
-/*   const { nazivEkipe, igrac: {ime}, igrac: {prezime},igrac: {pozicija},igrac: {brojIgraca} } = ekipa;
- */
-
-  get(teamRef).then((snapshot) => {
     if(snapshot.exists()) {
-      console.log(snapshot.val());
+      snapshot.forEach((childSnapshot) => {
+        const playerData = childSnapshot.val().igrac;
+        const { ime, prezime, pozicija, brojIgraca} = playerData;
+        const redIgraca = document.createElement('tr');
+        const infoTitle = document.querySelector('.playerInfoTitle');
+        infoTitle.innerHTML = `Igrači ekipe ${ekipa}`;
+
+
+        redIgraca.innerHTML = `
+          <td>${ime}</td>
+          <td>${prezime}</td>
+          <td>${brojIgraca}</td>
+          <td>${pozicija}</td>      
+                              `;
+
+          tableBody.appendChild(redIgraca);
+      });
+
     } else{
       console.log("Nema zabilježenih podataka za ovaj tim");
     }
@@ -92,5 +114,3 @@ export function readTeamData(ekipa){
     console.error(error);
   });
 }
-
- 
