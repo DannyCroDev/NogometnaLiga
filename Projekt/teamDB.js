@@ -1,4 +1,4 @@
-import { saveData } from './database.js';
+import { saveData, readTeamData } from './database.js';
 
 const teamForm = document.getElementById('teamForm');
 
@@ -11,7 +11,7 @@ teamForm.addEventListener("submit", (e) => {
   const pozicija = document.getElementById('pozicija').value;
 
   saveData(ekipa, ime, prezime, pozicija, brojIgraca);
-
+  readTeamData(ekipa);
   teamForm.reset();
 });
 

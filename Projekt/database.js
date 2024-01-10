@@ -1,5 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-import { getDatabase, ref, set, push } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
+import { getDatabase, ref, set, push, onValue, child, get } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js';
 import { nanoid } from 'https://cdn.jsdelivr.net/npm/nanoid/nanoid.js'
 
 const firebaseConfig = {
@@ -16,9 +16,8 @@ const app = initializeApp(firebaseConfig);
 
 export function saveData(ekipa, ime, prezime, pozicija, brojIgraca) {
   const db = getDatabase(app);
-
+  const nazivEkipe = ekipa;
   push(ref(db, 'timovi/' + ekipa), {
-    nazivEkipe: ekipa,
     igrac:{
         ime: ime,
         prezime: prezime,
@@ -73,3 +72,25 @@ push(ref(db, 'Registracija voditelja/' + uniqueId), {
 console.log(uniqueId);
 
 }
+
+
+
+export function readTeamData(ekipa){
+  const db = getDatabase();
+  const teamRef = ref(db, `timovi/${ekipa}`);
+
+/*   const { nazivEkipe, igrac: {ime}, igrac: {prezime},igrac: {pozicija},igrac: {brojIgraca} } = ekipa;
+ */
+
+  get(teamRef).then((snapshot) => {
+    if(snapshot.exists()) {
+      console.log(snapshot.val());
+    } else{
+      console.log("Nema zabilježenih podataka za ovaj tim");
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+}
+
+ 
