@@ -147,3 +147,35 @@ export function readTeamData(ekipa){
     console.error(error);
   });
 }
+
+
+export function readTeamAdmin(){
+  const db = getDatabase();
+  const teamRef = ref(db, 'timovi');
+  const tableBody = document.querySelector('.table-container table tbody');
+
+  tableBody.innerHTML = '';
+
+  get(teamRef).then((snapshot) => {
+
+    if(snapshot.exists()) {
+      snapshot.forEach((childSnapshot) => {
+
+        const teamName = childSnapshot.key;
+        const playerCount = Object.keys(childSnapshot.val()).length;
+        const teamRow = document.createElement('tr');
+        teamRow.innerHTML = `
+          <td>${teamName}</td>
+          <td>${playerCount}</td>
+          `
+          tableBody.appendChild(teamRow);
+        })
+
+
+    } else {
+      console.log("Nema zabilježenih podataka za ovaj tim");
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+}

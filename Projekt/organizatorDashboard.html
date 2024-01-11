@@ -19,41 +19,15 @@
 
     <div class="table-container">
         <h2>Popis prijavljenih ekipa od strane kapetana</h2>
-        <table>
+        <table id = "tablicaPrijavljenih">
             <thead>
                 <tr>
                     <th>Naziv ekipe</th>
                     <th>Broj Igrača</th>
-                    <th>Ime kapetana</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>PMF</td>
-                    <td>7</td>
-                    <td>Ante Matić</td>
-                </tr>
-
-                <tr>
-                    <td>KTF</td>
-                    <td>7</td>
-                    <td>Nedo Antić</td>
-                </tr>
-
-                <tr>
-                    <td>FESB</td>
-                    <td>8</td>
-                    <td>Antonio Makinja</td>
-                </tr>
-                
-                <tr>
-                    <td>FGAG</td>
-                    <td>10</td>
-                    <td>Jure Matković</td>
-                </tr>
-
             </tbody>
-            
         </table>
     </div>
 
@@ -61,20 +35,20 @@
         
         <form id="teamForm" class="inputs" >
             <h3>Unos rezultata:</h3>
-            <label for="domaci">Domaći:</label>
+            Domaći:
             <input type="text" id="domaci" name="domaci" required>
        
-            <label for="gosti">Gosti:</label>
+            Gosti:
             <input type="text" id="gosti" name="gosti" required>
 
             
             <div class="firstandlast">
               <div class="floating-input">
-                <label for="firstname">Golovi domaćina:</label>
+                Golovi domaćina:
                 <br><input type="number" id="firstname" name="domacirez" required>
               </div>
               <div class="floating-input">
-                <label for="lastname">Golovi gosta:</label>
+                Golovi gosta:
                 <br><input type="number" id="lastname" name="gostirez" required>
               </div>
             </div>
@@ -187,9 +161,9 @@
       </section>
 
       <div class = "button">
-        <h6><button type ="sumbit">Odjava</button></h6>
+        <h6><button type ="sumbit" id="logOffBtn">Odjava</button></h6>
       </div>
     
-
+    <script type="module" src="./JS/adminData.js"></script>
 </body>
 </html>
