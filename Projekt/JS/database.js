@@ -153,9 +153,11 @@ export function readTeamAdmin(){
   const db = getDatabase();
   const teamRef = ref(db, 'timovi');
   const tableBody = document.querySelector('.table-container table tbody');
+  const formaEkipe = document.getElementById('formaEkipe');
+  const ekipeLista = document.getElementById('ekipeLista');
 
   tableBody.innerHTML = '';
-
+  ekipeLista.innerHTML = '';
   get(teamRef).then((snapshot) => {
 
     if(snapshot.exists()) {
@@ -164,12 +166,20 @@ export function readTeamAdmin(){
         const teamName = childSnapshot.key;
         const playerCount = Object.keys(childSnapshot.val()).length;
         const teamRow = document.createElement('tr');
+        const ekipaOpcija = document.createElement('option');
+
         teamRow.innerHTML = `
           <td>${teamName}</td>
           <td>${playerCount}</td>
           `
           tableBody.appendChild(teamRow);
-        })
+
+        ekipaOpcija.innerHTML = `
+        
+          <option value="${teamName}">${teamName}</option>
+        `
+        ekipeLista.appendChild(ekipaOpcija);
+        });
 
 
     } else {

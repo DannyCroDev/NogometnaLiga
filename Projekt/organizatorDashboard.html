@@ -33,27 +33,23 @@
 
     <div class="box-form">
         
-        <form id="teamForm" class="inputs" >
+        <form id="formaEkipe" class="inputs">
             <h3>Unos rezultata:</h3>
+
             Odaberi ekipu:
-            <input type="text" id="domaci" name="domaci" required>
+            <select id="ekipeLista" name="ekipeLista" form="formaEkipe">
+              <option value=""></option>          
+            </select>
        
             Bodovi ekipe:
-            <input type="text" id="gosti" name="gosti" required>
+            <input type="number" id="bodovi" name="bodovi" required> 
 
-            
-            
               </div>
             </div>
-            
-    
             <div class="button">
               <button type="submit">Spremi</button>
             </div>
-    
-        </form>
-
-        
+          </form>
     </div>
 
     
