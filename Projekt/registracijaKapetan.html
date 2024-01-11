@@ -83,20 +83,22 @@
         <div class="right">
             <h5>Registracija</h5>
             <p>Imaš račun? <a href="prijavaKapetan.html">Prijavi se</a></p>
-            <div class="inputs">
-                <input type="text" placeholder="Ime">
+            <form class="inputs" id="registerInputs">
+                <input type="text" placeholder="Ime" id="register_capName">
                 <br>
-                <input type="text" placeholder="Prezime">
+                <input type="text" placeholder="Prezime" id="register_capLastname">
                 <br>
-                <input type="password" placeholder="Lozinka">
+                <input type="password" placeholder="Lozinka" id="register_capCode" autocomplete="section-blue Lozinka">
                 <br>
-                <input type="text" placeholder="Email">
-            </div>
+                <input type="text" placeholder="Email" id="register_capEmail">
 
-            <br><br>
+                <br><br>
 
-            <br>
-            <button>Registracija</button>
+                <br>
+                <button type="submit">Registracija</button>
+            </form>
+
+            
         </div>
 
     </div>
@@ -136,6 +138,8 @@
         <p class="copyright">Sveučilišna nogometna liga @ 2023</p>
 
     </section>
+    <script type="module" src="./registerCapDB.js"></script>
+
     <!--Skripte JS datoteka ispod ove linije-->
     <script src="./JS/scroll_to_top.js"></script>
     <script src="./JS/navbar.js"></script>

@@ -45,6 +45,52 @@
     margin-right: 5px;
 }
 
+#playerForm {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 50px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+#playerForm label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+#playerForm input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#playerForm button {
+    background-color: #033E6A;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#playerForm button:hover {
+    background-color: #1c6da8;
+}
+
+/* Dodatni stil za checkbox ako ga imaš u formi */
+#playerForm input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+
 .logo-container {
     text-align: center;
     margin-top: 20px;
