@@ -10,3 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
 logOffBtn.addEventListener("click", (e) => {
     window.location.href = 'prijavaOrganizator.html';
   })
+
+
+  
