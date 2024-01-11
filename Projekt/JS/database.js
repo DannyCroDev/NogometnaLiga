@@ -75,10 +75,25 @@ export function registerCapAcc(register_capName, register_capLastname, register_
 
 export function saveAdminAcc(admin_username, admin_password){
   const db = getDatabase(app);
-  push(ref(db, 'Računi voditelja/' + admin_username), {
+  return new Promise((resolve, reject) => {
+    const newAdminRef = push(ref(db, 'Računi voditelja/' + admin_username), {
       admin_username:  admin_username,
       admin_password: admin_password
-    });
+    })
+  
+  set(newAdminRef, {
+    admin_username:  admin_username,
+    admin_password: admin_password
+  })
+
+  .then(() => {
+    resolve();
+  })
+
+  .catch((error) => {
+    reject(error);
+  });
+});
 }
 
 export function registerAdminAcc(register_adminName, register_adminLastname, register_adminCode, register_adminEmail){
