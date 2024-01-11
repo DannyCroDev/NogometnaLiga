@@ -1,7 +1,7 @@
 import { saveCapAcc } from './database.js';
 
 const capInputs = document.getElementById('capInputs');
-const logButton = document.getElementById("logButton");
+
 
 capInputs.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -17,3 +17,4 @@ capInputs.addEventListener("submit", (e) => {
       console.error("Error saving data to the database:", error);
     });
 });
+
