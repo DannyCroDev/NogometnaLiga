@@ -32,12 +32,30 @@ export function saveData(ekipa, ime, prezime, pozicija, brojIgraca) {
 }
 
 export function saveCapAcc(cap_username, cap_password){
-    const db = getDatabase(app);
-    push(ref(db, 'Računi kapetana/' + cap_username), {
-        cap_username:  cap_username,
-        cap_password: cap_password
-      });
+  const db = getDatabase(app);
+  
+  return new Promise((resolve, reject) => {
+    const newCapRef = push(ref(db, "Računi kapetana/" + cap_username), {
+      cap_username: cap_username,
+      cap_password: cap_password
+    });
+
+    	
+    set(newCapRef, {
+      cap_username: cap_username,
+      cap_password: cap_password
+    })
+
+    .then(() => {
+      resolve();
+    })
+
+    .catch((error) => {
+      reject(error);
+    });
+  });
 }
+
 
 export function registerCapAcc(register_capName, register_capLastname, register_capCode, register_capEmail){
   const db = getDatabase(app);
