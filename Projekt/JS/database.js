@@ -171,13 +171,12 @@ export function readTeamAdmin(){
         teamRow.innerHTML = `
           <td>${teamName}</td>
           <td>${playerCount}</td>
-          `
+                             `
           tableBody.appendChild(teamRow);
 
         ekipaOpcija.innerHTML = `
-        
           <option value="${teamName}">${teamName}</option>
-        `
+                                `
         ekipeLista.appendChild(ekipaOpcija);
         });
 
