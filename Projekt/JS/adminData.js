@@ -2,9 +2,6 @@ import { readTeamAdmin } from "./database.js";
 
 const spremiBodove = document.getElementById("spremiBodove");
 const ekipeLista = document.getElementById("ekipeLista");
-let pozicijaStupac = document.getElementById("pozicijaStupac");
-let nazivStupac = document.getElementById("nazivStupac");
-let bodoviStupac = document.getElementById("bodoviStupac");
 let bodoviUnos = document.getElementById("bodoviUnos");
 const tablicaRezultata = document.getElementById("tablicaRezultata");
 
@@ -60,7 +57,7 @@ logOffBtn.addEventListener("click", (e) => {
             alert("Molimo vas odaberite tim i unesite bodove")
         }
     
-        
+        saveStandingsToLocal();
   });
 
 
@@ -86,3 +83,13 @@ logOffBtn.addEventListener("click", (e) => {
    })
 }
   
+
+function saveStandingsToLocal() {
+    const standingsData = Array.from(tablicaRezultata.rows).map(row => ({
+        position: row.cells[0].textContent,
+        team: row.cells[1].textContent,
+        points: row.cells[2].textContent
+    }));
+
+    localStorage.setItem('standingsData', JSON.stringify(standingsData));
+}
