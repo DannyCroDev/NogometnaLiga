@@ -9,10 +9,13 @@ adminInputs.addEventListener("submit", (e) => {
   const admin_password = document.getElementById('admin_password').value;
 
 
-  saveAdminAcc(admin_username, admin_password);
-
-  adminInputs.reset();
-
-
+  saveAdminAcc(admin_username, admin_password)
+  .then(() => {
+    window.location.href = 'organizatorDashboard.html';
+    adminInputs.reset();
+  })
+  .catch((error) => {
+    console.error("Error saving data to the database:", error);
+  });
 });
 

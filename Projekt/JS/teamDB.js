@@ -1,6 +1,7 @@
 import { saveData, readTeamData } from './database.js';
 
 const teamForm = document.getElementById('teamForm');
+const logOffBtn = document.getElementById("logOffBtn");
 
 teamForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -15,3 +16,8 @@ teamForm.addEventListener("submit", (e) => {
   teamForm.reset();
 });
 
+
+
+logOffBtn.addEventListener("click", (e) => {
+  window.location.href = 'prijavaKapetan.html';
+})

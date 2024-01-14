@@ -32,12 +32,30 @@ export function saveData(ekipa, ime, prezime, pozicija, brojIgraca) {
 }
 
 export function saveCapAcc(cap_username, cap_password){
-    const db = getDatabase(app);
-    push(ref(db, 'Računi kapetana/' + cap_username), {
-        cap_username:  cap_username,
-        cap_password: cap_password
-      });
+  const db = getDatabase(app);
+  
+  return new Promise((resolve, reject) => {
+    const newCapRef = push(ref(db, "Računi kapetana/" + cap_username), {
+      cap_username: cap_username,
+      cap_password: cap_password
+    });
+
+    	
+    set(newCapRef, {
+      cap_username: cap_username,
+      cap_password: cap_password
+    })
+
+    .then(() => {
+      resolve();
+    })
+
+    .catch((error) => {
+      reject(error);
+    });
+  });
 }
+
 
 export function registerCapAcc(register_capName, register_capLastname, register_capCode, register_capEmail){
   const db = getDatabase(app);
@@ -57,10 +75,25 @@ export function registerCapAcc(register_capName, register_capLastname, register_
 
 export function saveAdminAcc(admin_username, admin_password){
   const db = getDatabase(app);
-  push(ref(db, 'Računi voditelja/' + admin_username), {
+  return new Promise((resolve, reject) => {
+    const newAdminRef = push(ref(db, 'Računi voditelja/' + admin_username), {
       admin_username:  admin_username,
       admin_password: admin_password
-    });
+    })
+  
+  set(newAdminRef, {
+    admin_username:  admin_username,
+    admin_password: admin_password
+  })
+
+  .then(() => {
+    resolve();
+  })
+
+  .catch((error) => {
+    reject(error);
+  });
+});
 }
 
 export function registerAdminAcc(register_adminName, register_adminLastname, register_adminCode, register_adminEmail){
@@ -108,6 +141,47 @@ export function readTeamData(ekipa){
       });
 
     } else{
+      console.log("Nema zabilježenih podataka za ovaj tim");
+    }
+  }).catch((error) => {
+    console.error(error);
+  });
+}
+
+
+export function readTeamAdmin(){
+  const db = getDatabase();
+  const teamRef = ref(db, 'timovi');
+  const tableBody = document.querySelector('.table-container table tbody');
+  const formaEkipe = document.getElementById('formaEkipe');
+  const ekipeLista = document.getElementById('ekipeLista');
+
+  tableBody.innerHTML = '';
+  ekipeLista.innerHTML = '';
+  get(teamRef).then((snapshot) => {
+
+    if(snapshot.exists()) {
+      snapshot.forEach((childSnapshot) => {
+
+        const teamName = childSnapshot.key;
+        const playerCount = Object.keys(childSnapshot.val()).length;
+        const teamRow = document.createElement('tr');
+        const ekipaOpcija = document.createElement('option');
+
+        teamRow.innerHTML = `
+          <td>${teamName}</td>
+          <td>${playerCount}</td>
+                             `
+          tableBody.appendChild(teamRow);
+
+        ekipaOpcija.innerHTML = `
+          <option value="${teamName}">${teamName}</option>
+                                `
+        ekipeLista.appendChild(ekipaOpcija);
+        });
+
+
+    } else {
       console.log("Nema zabilježenih podataka za ovaj tim");
     }
   }).catch((error) => {
